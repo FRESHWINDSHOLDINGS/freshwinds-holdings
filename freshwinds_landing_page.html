@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshwinds Holdings - Your Trusted Partner for South African Products in Africa</title>
+    <meta name="description" content="Struggling to find reliable suppliers for South African products? Freshwinds Holdings is your trusted, professional partner for quality imports across Africa.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 76, 44, 0.95) 0%, rgba(26, 122, 71, 0.95) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%230f4c2c" width="1200" height="600"/><circle fill="%231a7a47" opacity="0.1" cx="200" cy="100" r="150"/><circle fill="%231a7a47" opacity="0.1" cx="800" cy="400" r="200"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        
+        .hero .highlight {
+            color: #ffd700;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #0f4c2c;
+            padding: 18px 45px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .problem-section h2 {
+            font-size: 2.5em;
+            color: #e74c3c;
+            margin-bottom: 30px;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        
+        .problem-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .problem-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .problem-card h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Solution Section */
+        .solution-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .solution-section h2 {
+            font-size: 2.5em;
+            color: #0f4c2c;
+            margin-bottom: 20px;
+        }
+        
+        .solution-section .intro {
+            font-size: 1.3em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-top: 5px solid #1a7a47;
+            transition: transform 0.3s;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .solution-card .icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .solution-card h3 {
+            color: #0f4c2c;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .solution-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Why Us Section */
+        .why-us-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .why-us-section h2 {
+            font-size: 2.5em;
+            color: #0f4c2c;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .why-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .why-card .badge {
+            background: linear-gradient(135deg, #1a7a47 0%, #0f4c2c 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5em;
+            box-shadow: 0 5px 20px rgba(26, 122, 71, 0.3);
+        }
+        
+        .why-card h3 {
+            color: #0f4c2c;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .why-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Products Section */
+        .products-section {
+            background: linear-gradient(135deg, #0f4c2c 0%, #1a7a47 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .products-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .products-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+        
+        .product-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .product-item .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .product-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #ffd700;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5em;
+            color: #0f4c2c;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            color: #0f4c2c;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section .cta-button {
+            background: #0f4c2c;
+            color: white;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .social-proof h2 {
+            font-size: 2em;
+            color: #0f4c2c;
+            margin-bottom: 40px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 800;
+            color: #1a7a47;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f4c2c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            .problem-section h2,
+            .solution-section h2,
+            .why-us-section h2,
+            .products-section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Tired of Unreliable Suppliers for <span class="highlight">South African Products?</span></h1>
+        <p>We are your trusted, professional contact in South Africa - delivering quality products to businesses across Africa with zero hassle.</p>
+        <a href="#order-form" class="cta-button">🚀 Get Your Products Now</a>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <h2>❌ We Know Your Struggles...</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="icon">😤</div>
+                <h3>Unreliable Suppliers</h3>
+                <p>You've been burned before by suppliers who promise the world but disappear after payment. Orders delayed, quality compromised, money wasted.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="icon">💸</div>
+                <h3>Hidden Costs & Scams</h3>
+                <p>Surprise fees, unclear pricing, payment scams - you're tired of being taken advantage of when trying to import quality products.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="icon">📦</div>
+                <h3>No Accountability</h3>
+                <p>When things go wrong, your supplier becomes a ghost. No updates, no tracking, no customer service - just frustration and losses.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="icon">🌍</div>
+                <h3>Language & Distance Barriers</h3>
+                <p>Dealing with foreign suppliers is exhausting - different time zones, communication issues, cultural misunderstandings that cost you money.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="icon">⏰</div>
+                <h3>Time-Wasting Process</h3>
+                <p>You spend weeks vetting suppliers, negotiating, following up - only to be disappointed. Your business suffers while you chase shadows.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="icon">❓</div>
+                <h3>No Trusted Contact</h3>
+                <p>You need someone ON THE GROUND in South Africa who actually cares about your success - not just another faceless supplier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <h2>✅ Freshwinds Holdings: Your Solution</h2>
+        <p class="intro">We are the reliable, trustworthy, professional partner you've been searching for. Here's how we solve EVERY problem above:</p>
+        
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <div class="icon">🤝</div>
+                <h3>100% Reliability</h3>
+                <p>We're a registered, professional company based in South Africa. Our reputation is built on KEEPING OUR PROMISES. Every time. No excuses.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">💎</div>
+                <h3>Transparent Pricing</h3>
+                <p>No hidden fees. No surprises. We provide detailed quotes upfront with ALL costs included. What we quote is what you pay.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">📱</div>
+                <h3>Always Available</h3>
+                <p>Direct WhatsApp access to real people who care. Track your order in real-time. Get updates proactively. We're accountable - always.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">🎯</div>
+                <h3>Local Expert</h3>
+                <p>We're ON THE GROUND in South Africa, speak your language, understand your needs. No cultural barriers - just smooth, professional service.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">⚡</div>
+                <h3>Fast & Easy Process</h3>
+                <p>Simple order form. Quick response. Fast processing. We handle EVERYTHING - sourcing, quality checks, documentation, shipping. You relax.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">🛡️</div>
+                <h3>Your Trusted Partner</h3>
+                <p>We're not just a supplier - we're YOUR PERSON in South Africa. Think of us as your local office. We protect your interests like our own.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us-section">
+        <h2>Why Businesses Trust Freshwinds Holdings</h2>
+        <div class="why-us-grid">
+            <div class="why-card">
+                <div class="badge">🏢</div>
+                <h3>Fully Registered Company</h3>
+                <p>Legitimate South African business with verifiable credentials. You're dealing with professionals, not fly-by-night operators.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="badge">✨</div>
+                <h3>Quality Guaranteed</h3>
+                <p>We personally inspect every shipment before it leaves. Only premium, authentic South African products reach you.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="badge">🚚</div>
+                <h3>End-to-End Service</h3>
+                <p>From sourcing to your doorstep - we handle customs, shipping, documentation. You focus on your business.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="badge">💬</div>
+                <h3>Real Communication</h3>
+                <p>Direct WhatsApp line. Real people. Same-day responses. No automated nonsense - just human-to-human service.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="badge">🌍</div>
+                <h3>Pan-African Experience</h3>
+                <p>We understand African markets, regulations, logistics. We've solved the problems you're facing right now.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="badge">🔒</div>
+                <h3>Secure Payments</h3>
+                <p>Proper invoicing. Secure payment methods. Legal contracts. Your money is safe with verifiable transactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2>Premium South African Products We Supply</h2>
+        <p>From coffee to cosmetics - we source the best South Africa has to offer</p>
+        
+        <div class="products-grid">
+            <div class="product-item">
+                <div class="icon">☕</div>
+                <h3>Premium Coffee</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">🍷</div>
+                <h3>Wines & Spirits</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">🍽️</div>
+                <h3>Food Products</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">🥤</div>
+                <h3>Beverages</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">💄</div>
+                <h3>Cosmetics</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">🏠</div>
+                <h3>Household Goods</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">📱</div>
+                <h3>Electronics</h3>
+            </div>
+            <div class="product-item">
+                <div class="icon">👕</div>
+                <h3>Textiles & Apparel</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <h2>Trusted by Businesses Across Africa</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">9+</div>
+                <div class="stat-label">African Countries Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Quality Guarantee</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24-48h</div>
+                <div class="stat-label">Quote Response Time</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">WhatsApp Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <h2>Stop Wasting Time with Unreliable Suppliers</h2>
+        <p>Get a trusted partner in South Africa TODAY - Professional, Reliable, Results-Driven</p>
+        <a href="#order-form" class="cta-button">📋 Place Your Order Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>Freshwinds Holdings</strong> - Your Trusted South African Trade Partner</p>
+        <p>📱 WhatsApp: <a href="https://wa.me/27656787037">+27 65 678 7037</a></p>
+        <p>🌍 Serving: Rwanda | Burundi | DRC | Uganda | Kenya | Tanzania | Zambia | Zimbabwe | Mozambique</p>
+        <p style="margin-top: 20px; font-size: 0.9em;">© 2025 Freshwinds Holdings. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
